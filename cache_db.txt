@@ -20,3 +20,5 @@ Desventajas:
 
 Ejemplo de configuración en settings.py:
 SESSION_ENGINE = "django.contrib.sessions.backends.cached_db"
+
+pip install environs
