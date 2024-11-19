@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}My Website{% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'publicaciones/styles.css' %}">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <!-- Navbar -->
+            <div class="navbar">
+                {% include "navbar.html" %}
+            </div>
+
+            <!-- Header Title -->
+            <div class="header-titulo">
+                <h1>Bienvenido {{ user.username|capfirst }}</h1>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="content">
+            {% block content %} {% endblock %}
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024</p>
+        </footer>
+    </body>
+</html>
